@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import TableView from "@/views/TableView.vue";
+import TableView from '@/views/TableView.vue';
 
 const routes = [
   {
-    path: '/',
+    path: '/element-vue-table/',
     name: 'Default',
     component: TableView,
   },
