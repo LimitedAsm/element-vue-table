@@ -14,5 +14,6 @@ import TableSection from "@/components/TableSection.vue";
 .table-view-content{
   padding: 15px;
   height: 100%;
+  box-sizing: border-box;
 }
 </style>

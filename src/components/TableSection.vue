@@ -1,32 +1,34 @@
 <template>
+  <div class="table-section-box">
     <el-auto-resizer>
-      <template #default="{ height, width }">
+      <template #default="{height,  width }">
         <el-table-v2
-        v-model:sort-state="sortState"
-        :columns="columns"
-        :data="data"
-        :estimated-row-height="50"
-        :expand-column-key="columns[0].key"
-        :width="width"
-        :height="height"
-        @column-sort="onSort"
-      >
-        <template #row="props">
-          <Row v-bind="props" />
-        </template>
-        <template v-if="isLoading" #overlay>
-          <div
-            class="el-loading-mask"
-            style="display: flex; align-items: center; justify-content: center"
-          >
-            <el-icon class="is-loading" color="var(--el-color-primary)" :size="26">
-              <loading-icon />
-            </el-icon>
-          </div>
-        </template>
-      </el-table-v2>
+          v-model:sort-state="sortState"
+          :columns="columns"
+          :data="data"
+          :estimated-row-height="50"
+          :expand-column-key="columns[0].key"
+          :width="width"
+          :height="height"
+          @column-sort="onSort"
+        >
+          <template #row="props">
+            <Row v-bind="props" />
+          </template>
+          <template v-if="isLoading" #overlay>
+            <div
+              class="el-loading-mask"
+              style="display: flex; align-items: center; justify-content: center"
+            >
+              <el-icon class="is-loading" color="var(--el-color-primary)" :size="26">
+                <loading-icon />
+              </el-icon>
+            </div>
+          </template>
+        </el-table-v2>
       </template>
     </el-auto-resizer>
+  </div>
 </template>
 
 <script lang="jsx" setup>
@@ -105,5 +107,18 @@ onMounted(() => {
 }
 .example-showcase .el-table-v2__overlay {
   z-index: 9;
+}
+.el-table-v2__row{
+width: 100%;
+}
+.table-section-box{
+  box-sizing: content-box;
+  height: calc(100% - 110px)
+}
+@media (max-width: 1100px){
+  .table-section-box{
+    box-sizing: content-box;
+    height: calc(100% - 150px)
+  }
 }
 </style>
