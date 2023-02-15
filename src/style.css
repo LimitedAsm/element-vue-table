@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.search-label{
+  font-size: 12px;
+  font-weight: bold;
+  color: #868a8e;
+  padding-bottom: 5px;
+}
+.search-box{
+  padding: 5px 0;
+}
+
+.search{
+  width: 100%;
+}
+
+.search, .search *{
+  font-size: 12px !important;
+}

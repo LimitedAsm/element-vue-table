@@ -1,0 +1,12 @@
+{
+  "prettier.configPath": ".prettierrc.js",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "vetur.validation.template": false,
+  "editor.formatOnSave": false,
+  "[javascript]": {
+      "editor.formatOnSave": true
+  },
+  "[vue]": {
+      "editor.formatOnSave": true
+  }
+}
